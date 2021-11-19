@@ -7,7 +7,12 @@
         size="mini"
         @click="handleMenu"
       ></el-button>
-      <h3 style="color: #fff">首页</h3>
+      <el-breadcrumb>
+        <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
+        <el-breadcrumb-item :to="current.path" v-if="current">{{
+          current.label
+        }}</el-breadcrumb-item>
+      </el-breadcrumb>
     </div>
     <div class="r-content">
       <el-dropdown trigger="click" size="mini">
@@ -24,6 +29,7 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
 export default {
   data() {
     return {
@@ -34,6 +40,11 @@ export default {
     handleMenu() {
       this.$store.commit("collapseMenu");
     },
+  },
+  computed: {
+    ...mapState({
+      current: (state) => state.tab.currentMenu,
+    }),
   },
 };
 </script>
@@ -59,6 +70,21 @@ header {
     width: 40px;
     height: 40px;
     border-radius: 50%;
+  }
+}
+</style>
+
+<style lang="scss">
+.el-breadcrumb__item {
+  .el-breadcrumb__inner {
+    color: #666;
+    font-weight: normal;
+  }
+  &:last-child {
+    .el-breadcrumb__inner {
+      color: #fff;
+      font-weight: normal;
+    }
   }
 }
 </style>

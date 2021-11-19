@@ -5,7 +5,7 @@ import router from './router'
 import store from './store'
 import http from 'axios'
 
-import { Button, Select,Container, Aside, Header, Main, Menu, MenuItem, MenuItemGroup, Submenu, Dropdown, DropdownItem, DropdownMenu, Row, Col, Card} from 'element-ui';
+import { Button, Select,Container, Aside, Header, Main, Menu, MenuItem, MenuItemGroup, Submenu, Dropdown, DropdownItem, DropdownMenu, Row, Col, Card, Breadcrumb, BreadcrumbItem, Table, TableColumn} from 'element-ui';
 Vue.config.productionTip = false
 
 Vue.use(Button)
@@ -24,6 +24,10 @@ Vue.use(DropdownMenu)
 Vue.use(Row)
 Vue.use(Col)
 Vue.use(Card)
+Vue.use(Table)
+Vue.use(TableColumn)
+Vue.use(Breadcrumb)
+Vue.use(BreadcrumbItem)
 Vue.prototype.$http = http
 
 // Vue.use(ElementUI);
