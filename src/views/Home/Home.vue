@@ -10,7 +10,7 @@
           </div>
         </div>
         <div class="login-info">
-          <p>上次登陆时间：<span>2021-11-18</span></p>
+          <p>上次登陆时间：<span>2021-11-20</span></p>
           <p>上次登陆地点：<span>杭州</span></p>
         </div>
       </el-card>
@@ -45,6 +45,7 @@
 export default {
   data() {
     return {
+      date: new Date().toLocaleString(),
       userImg: require("../../assets/images/user.png"),
       tableLabel: {
         name: "课程",
