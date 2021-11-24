@@ -17,28 +17,6 @@
       <i :class="'el-icon-' + item.icon"></i>
       <span slot="title">{{ item.label }}</span>
     </el-menu-item>
-
-    <el-submenu
-      :index="item.label"
-      v-for="item in haveChildren"
-      :key="item.path"
-      @click="clickMenu(item)"
-    >
-      <template slot="title">
-        <i :class="'el-icon-' + item.icon"></i>
-        <span slot="title">{{ item.label }}</span>
-      </template>
-      <el-menu-item-group>
-        <el-menu-item
-          :index="subItem.path"
-          v-for="(subItem, subIndex) in item.children"
-          :key="subIndex"
-        >
-          <i :class="'el-icon-' + subItem.icon"></i>
-          <span slot="title">{{ subItem.label }}</span>
-        </el-menu-item>
-      </el-menu-item-group>
-    </el-submenu>
   </el-menu>
 </template>
 
@@ -82,24 +60,11 @@ export default {
           url: "UserManage/UserManage",
         },
         {
-          label: "其它",
+          path: "/location",
+          name: "location",
+          label: "百度地图",
           icon: "location",
-          children: [
-            {
-              path: "/page1",
-              name: "page1",
-              label: "页面1",
-              icon: "setting",
-              url: "Other/PageOne",
-            },
-            {
-              path: "/page2",
-              name: "page2",
-              label: "页面2",
-              icon: "setting",
-              url: "Other/PageTwo",
-            },
-          ],
+          url: "LocationManage/LocationManage",
         },
       ],
     };

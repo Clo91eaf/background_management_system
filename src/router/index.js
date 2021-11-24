@@ -28,7 +28,12 @@ const routes = [
         path: '/user',
         name: 'user',
         component: ()=>import('@/views/User/User')
-      }
+      },
+      {
+        path: '/location',
+        name: 'location',
+        component: ()=>import('@/views/Location/Location')
+      },
     ]
   },
   
