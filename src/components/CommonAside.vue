@@ -74,6 +74,13 @@ export default {
           icon: "picture",
           url: "EchartsManage/EchartsManage",
         },
+        {
+          path: "/earth",
+          name: "earth",
+          label: "Earth",
+          icon: "orange",
+          url: "EarthManage/EarthManage",
+        },
       ],
     };
   },
