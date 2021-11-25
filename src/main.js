@@ -5,6 +5,7 @@ import router from './router'
 import store from './store'
 import http from 'axios'
 import BaiduMap from 'vue-baidu-map'
+import * as echarts from 'echarts'
 
 import { Button, Select,Container, Aside, Header, Main, Menu, MenuItem, MenuItemGroup, Submenu, Dropdown, DropdownItem, DropdownMenu, Row, Col, Card, Breadcrumb, BreadcrumbItem, Table, TableColumn} from 'element-ui';
 Vue.config.productionTip = false
@@ -30,6 +31,7 @@ Vue.use(TableColumn)
 Vue.use(Breadcrumb)
 Vue.use(BreadcrumbItem)
 Vue.prototype.$http = http
+Vue.prototype.$echarts = echarts
 
 // Vue.use(ElementUI);
 new Vue({

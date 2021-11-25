@@ -22,6 +22,7 @@
 
 <style>
 h3 {
+  margin-top:15px;
   color: #fff;
 }
 .el-menu-vertical-demo{
@@ -65,6 +66,13 @@ export default {
           label: "百度地图",
           icon: "location",
           url: "LocationManage/LocationManage",
+        },
+        {
+          path: "/echarts",
+          name: "echarts",
+          label: "Echarts",
+          icon: "picture",
+          url: "EchartsManage/EchartsManage",
         },
       ],
     };

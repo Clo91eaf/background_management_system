@@ -34,6 +34,11 @@ const routes = [
         name: 'location',
         component: ()=>import('@/views/Location/Location')
       },
+      {
+        path: '/echarts',
+        name: 'echarts',
+        component: ()=>import('@/views/Echarts/Echarts')
+      },
     ]
   },
   
